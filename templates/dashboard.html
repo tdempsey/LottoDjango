@@ -116,16 +116,16 @@
                             </div>
                             
                             <div class="form-check mb-3">
-                                <input class="form-check-input" type="checkbox" id="include_scores" name="include_scores" 
-                                       {{ 'checked' if settings.include_scores else '' }}>
+                                <input class="form-check-input" type="checkbox" id="include_scores" name="include_scores"
+                                       {% if settings.include_scores %}checked{% endif %}>
                                 <label class="form-check-label" for="include_scores">
                                     Include Scoring & Ranking
                                 </label>
                             </div>
                             
                             <div class="form-check mb-3">
-                                <input class="form-check-input" type="checkbox" id="load_historical" name="load_historical" 
-                                       {{ 'checked' if settings.load_historical else '' }}>
+                                <input class="form-check-input" type="checkbox" id="load_historical" name="load_historical"
+                                       {% if settings.load_historical %}checked{% endif %}>
                                 <label class="form-check-label" for="load_historical">
                                     Load Historical Data for Duplicate Filtering
                                 </label>
